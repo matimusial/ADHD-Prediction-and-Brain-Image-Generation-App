@@ -1,11 +1,14 @@
 __pycache__/
 .idea/
+*.nii.gz
+*.nii
+url.txt
 
-input_data/mri/*
-!input_data/mri/link
+MRI/GAN/MODELS/*
+!MRI/GAN/MODELS/link
 
-app/project_data/eeg_train_data/*
-!app/project_data/eeg_train_data/link
+EEG/TRAIN/TRAIN_DATA/*
+!EEG/TRAIN/TRAIN_DATA/link
 
-app/project_data/gan_models/*
-!app/project_data/gan_models/link
+INPUT_DATA/MRI/*
+!INPUT_DATA/MRI/link

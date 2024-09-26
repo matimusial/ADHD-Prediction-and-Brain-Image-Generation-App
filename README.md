@@ -1,19 +1,15 @@
-# ADHD Prediction and Brain Image Generation App
+# ADHD Predictor
 
 ## Overview
 
-This is a desktop application developed using Python, PyQt5, and PostgreSQL, designed to predict ADHD from EEG data using a Convolutional Neural Network (CNN) and generate brain images using a Generative Adversarial Network (GAN). The application processes EEG and MRI data, enabling the model to identify ADHD patterns and augment the MRI dataset with generated images.
+This project aims to predict ADHD (Attention Deficit Hyperactivity Disorder) in children using Convolutional Neural Networks (CNN). It utilizes two main datasets: EEG brain wave data and MRI brain images. The project consists of two main components:
 
-The current version of the code has been **heavily refactored** compared to the previous branch, resulting in a more structured, modular, and efficient implementation.
+1. **EEG Data Analysis**: Using EEG data to predict the presence of ADHD in children with deep learning models.
+2. **MRI Data Augmentation and Analysis**: Generating additional MRI brain images using Generative Adversarial Networks (GAN) and using CNN to predict ADHD from original images.
 
-For a more detailed overview of the project, please visit the **Info** section of the project website.
+**Note:** This project is being carried out at the West Pomeranian University of Technology in Szczecin. The full version of the program with a user interface does not function fully without a connection to the database, which is only available on the university network. To use the application without the database, it can be run in console mode. You need to download the repository and run the `main_MRI` or `main_EEG` files after obtaining the necessary files from the locations specified in `link.txt`. It may be necessary to make minor modifications to the code for the program to work correctly. You can also download the [executable file](https://drive.google.com/drive/folders/1psPeXf14x0Ws7oRFMAxcfYPqa9xKi9uW?usp=sharing), but without a connection to the database, the program's functionality will be limited.
 
-## Features
-
-- **ADHD Prediction from EEG Data**: The model is trained to predict ADHD by analyzing EEG data from children, both with and without ADHD.
-- **MRI Image Generation**: A GAN model is employed to generate brain MRI images, enhancing the dataset used for model training.
-- **Desktop Application**: Built using PyQt5, providing an intuitive graphical interface for managing data and predictions.
-- **Local PostgreSQL Integration**: The application uses a local PostgreSQL database to manage and store the data.
+The entire program specification can be found on the `info.html` page under the "Specification" section.
 
 ## Datasets
 
@@ -29,17 +25,16 @@ The MRI dataset provides brain images, which are used along with generated image
 
 **Source**: [OpenNeuro Dataset ds002424](https://openneuro.org/datasets/ds002424/versions/1.2.0)
 
-## Functionality
+## Methodology
 
-- **EEG Data Processing and Model Training**: EEG data is processed into a format suitable for CNN analysis. Then, a deep learning model is trained to identify ADHD features from EEG patterns.
-- **MRI Image Generation and Processing**: GANs are used to generate additional MRI images, augmenting the training dataset and improving model performance.
+1. **EEG Data Processing and Model Training**: EEG data is processed into a format suitable for CNN analysis. Then, a deep learning model is trained to identify ADHD features from EEG patterns.
+2. **MRI Image Generation and Processing**: GANs are used to generate additional MRI images to increase the existing dataset. These images are then processed and used to train another CNN model to predict ADHD.
 
-## Installation
+## Objectives
 
-1. Clone this repository.
-2. Download the dataset files listed in the text files found in the corresponding folders.
-3. Set up a local PostgreSQL database and update the configuration file (`database.py`) with your credentials.
-4. Install the required Python packages:
+- Provide an accurate and reliable method for predicting ADHD using non-invasive EEG and MRI data.
+- Increase the availability of high-quality MRI brain images through generative techniques, supporting the development of robust predictive models.
 
-   ```bash
-   pip install PyQt5 numpy nibabel pyedflib scipy pandas matplotlib mne scikit-learn psycopg2 tensorflow
+## Contributors
+
+&copy; Mateusz Musiał, Jacek Lal, Radosław Nelza, Artur Panasiuk
