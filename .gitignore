@@ -1,0 +1,11 @@
+__pycache__/
+.idea/
+
+input_data/mri/*
+!input_data/mri/link
+
+app/project_data/eeg_train_data/*
+!app/project_data/eeg_train_data/link
+
+app/project_data/gan_models/*
+!app/project_data/gan_models/link
